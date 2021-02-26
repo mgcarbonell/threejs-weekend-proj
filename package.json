@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "three": "^0.126.0"
+  },
+  "name": "threejs-weekend-proj",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
