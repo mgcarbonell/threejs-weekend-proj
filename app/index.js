@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+// import * as THREE from 'three';
 
 // Set up  the scene
 const scene = new THREE.Scene();
@@ -15,9 +15,19 @@ render.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
 // Let's make a Cube:
+// BoxGeometry contains points (vertices) and fill (faces) of the Cube.
 const geometry = new THREE.BoxGeometry();
+// There are several materials in Three.js but for this we'll use MeshBasicMaterial
 const material = new THREE.MeshBasicMaterial( { color: 0x2F2FD2 } );
+// A mesh is an object that takes a geometry and applies a material to it.
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube)
 
 camera.position.z = 5;
+
+// Now let's render something with a render or animate loop
+function animate() {
+  requestAnimationFrame(animate);
+  renderer.render(scene, camera);
+}
+animate()
