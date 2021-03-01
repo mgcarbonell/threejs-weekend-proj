@@ -13,3 +13,11 @@ const renderer = new THREE.WebGLRenderer();
 render.setSize( window.innerWidth, window.innerHeight );
 
 document.body.appendChild( renderer.domElement );
+
+// Let's make a Cube:
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial( { color: 0x2F2FD2 } );
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube)
+
+camera.position.z = 5;
